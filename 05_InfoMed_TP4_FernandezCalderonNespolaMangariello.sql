@@ -1,5 +1,6 @@
 -- Ejercicio 5
 SELECT DISTINCT ciudad FROM pacientes;
+SET ciudad = TRIM(BOTH '' FROM LOWER(ciudad))
 
 -- Para limpieza de datos (puede requerir adaptaciones)
 UPDATE pacientes SET ciudad = TRIM(BOTH ' ' FROM LOWER(ciudad));
