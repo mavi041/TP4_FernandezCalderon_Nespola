@@ -1,3 +1,5 @@
+![itba_logo](https://github.com/user-attachments/assets/e44adc32-7e4d-4df4-b571-e22ac86e300b)
+
 # TP4_FernandezCalderon_Nespola
 ## Materia 
 Informática Médica (16.22)
