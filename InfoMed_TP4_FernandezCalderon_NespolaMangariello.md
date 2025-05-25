@@ -16,14 +16,14 @@ Según la función, es una base de datos transaccional u operativa debido a que 
 
 ### 3. Modelo lógico entidad-relación
 
-
+![Modelo lógico.png]
 
 
 ### 4. ¿Está normalizada la base de datos?
 
 La base de datos presentada se encuentra **parcialmente normalizada**. 
 
-1.  La *Primera Forma Normal(1FN)* se cumple ya que todas las tablas tienen dominios atómicos (no hay campos multivaluados o repetidos<img width="1166" alt="Captura de pantalla 2025-05-24 a la(s) 20 56 37" src="https://github.com/user-attachments/assets/6325641e-3341-463a-a0c8-42e6003723cf" />
+1.  La *Primera Forma Normal(1FN)* se cumple ya que todas las tablas tienen dominios atómicos (no hay campos multivaluados o repetidos)
 ), y poseen claves primarias bien definidas. 
 2. La *Segunda Forma Normal (2FN)* también se cumple debido a que no existe dependencias parciales (todas las tablas con claves compuestas tienen sus atributos dependientes completamente de la clave).
 3.  En la *Tercera Forma Normal (3FN)* se debe mejorar:
