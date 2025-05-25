@@ -50,21 +50,21 @@ SELECT
   EXTRACT(YEAR FROM age(current_date, fecha_nacimiento)) AS edad
 FROM pacientes;
 ```
-![Query 2](./Imagenes TP4/Query 2.png)
+![Query 2](Imagenes TP4/Query 2.png)
 
 ### 3. Actualización de la dirección de la paciente Luciana Gómez
 
 ```sql
 UPDATE pacientes SET numero = '500', calle = 'Calle Corrientes', ciudad = 'Buenos Aires' WHERE nombre = 'Luciana Gómez' AND numero = '121' AND calle = 'Avenida Las Heras';
 ```
-![Query 3](./Imagenes TP4/Query 3.png)
+![Query 3](.Imagenes TP4/Query 3.png)
 
 ### 4. Seleccionar el nombre y la matrícula de cada médico cuya especialidad sea identificada por el id 4
 
 ```sql 
 SELECT nombre, matricula FROM medicos WHERE especialidad_id = 4;
 ```
-![Query 4](./Imagenes TP4/Query 4.png)
+![Query 4](Imagenes TP4/Query 4.png)
 
 ### 5. Query que arregle las inconsistencias en la forma en la que están escritos los nombres de las ciudades
 
@@ -85,7 +85,7 @@ UPDATE pacientes SET ciudad = 'Rosario' WHERE ciudad = 'rosario';
 ```sql 
 SELECT nombre, calle, numero FROM pacientes WHERE ciudad = ‘Buenos Aires’;
 ```
-![Query 6.1](./Imagenes TP4/Query 6.1.png)
+![Query 6.1](Imagenes TP4/Query 6.1.png)
 
 ### 7. Cantidad de pacientes que viven en cada ciudad
 ```sql
@@ -93,15 +93,15 @@ SELECT ciudad, COUNT(*) AS cantidad_pacientes
 FROM pacientes
 GROUP BY ciudad;
 ```
-![Query 7.1](./Imagenes TP4/Query 7.1.png)
+![Query 7.1](Imagenes TP4/Query 7.1.png)
 
 ### 8. Cantidad de pacientes por sexo que viven en cada ciudad
 ``` sql
 SELECT ciudad, id_sexo, COUNT(*) FROM pacientes
 GROUP BY ciudad, id_sexo;
 ``` 
-![Query 8.1](./Imagenes TP4/Query 8.1.png)
-![Query 8.2](./Imagenes TP4/Query 8.2.png)
+![Query 8.1](Imagenes TP4/Query 8.1.png)
+![Query 8.2](Imagenes TP4/Query 8.2.png)
 
 ### 9. Obtener la cantidad de recetas emitidas por cada médico
 ``` sql
@@ -109,7 +109,7 @@ SELECT med.nombre, COUNT(*) AS cantidad
 FROM recetas rec JOIN medicos med ON rec.id_medico = med.id_medico
 GROUP BY med.nombre;
 ```
-![Query 9.1](./Imagenes TP4/Query 9.1.png)
+![Query 9.1](Imagenes TP4/Query 9.1.png)
 
 ### 10. Obtener todas las consultas médicas realizadas por el médico con ID igual a 3 durante el mes de agosto de 2024
 
@@ -118,7 +118,7 @@ SELECT * FROM consultas
 WHERE id_medico = 3 AND fecha BETWEEN ‘2024-08-01’ AND ‘2024-08-31’;
 ```
 
-![Query 10.1](./Imagenes TP4/Query 10.1.png)
+![Query 10.1](Imagenes TP4/Query 10.1.png)
 
 ### 11. Obener el nombre de los pacientes junto con la fecha y el diagnóstico de todas las consultas médicas realizadas en agosto del 2024
 
@@ -127,7 +127,7 @@ SELECT pac.nombre, con.fecha, con.diagnostico
 FROM pacientes pac JOIN consultas con ON pac.id_paciente = con.id_paciente 
 WHERE con.fecha BETWEEN '2024-08-01' AND '2024-08-31';
 ```
-![Query 11.1](./Imagenes TP4/Query 11.1.png)
+![Query 11.1](Imagenes TP4/Query 11.1.png)
 
 ### 12. Obtener el nombre de los medicamentos prescritos más de una vez por el médico con ID igual a 2
 
@@ -138,7 +138,7 @@ WHERE rec.id_medico = 2
 GROUP BY med.nombre 
 HAVING COUNT(*) > 1;
 ```
-![Query 12.1](./Imagenes TP4/Query 12.1.png)
+![Query 12.1](Imagenes TP4/Query 12.1.png)
 
 
 ### 13. Obtener el nombre de los pacientes junto con la cantidad total de recetas que han recibido
@@ -148,7 +148,7 @@ SELECT pac.nombre, COUNT(*) AS cantidad
 FROM pacientes pac JOIN recetas rec ON pac.id_paciente = rec.id_paciente 
 GROUP BY pac.nombre;
 ```
-![Query 13.1](./Imagenes TP4/Query 13.1.png)
+![Query 13.1](Imagenes TP4/Query 13.1.png)
 
 ### 14. Obtener el nombre del medicamento más recetado junto con la cantidad de recetas emitidas para ese medicamento
 
@@ -159,7 +159,7 @@ GROUP BY med.nombre
 ORDER BY cantidad DESC 
 LIMIT 1;
 ```
-![Query 14](./Imagenes TP4/Query 14.png)
+![Query 14](Imagenes TP4/Query 14.png)
 
 ### 15. Obtener el nombre del paciente junto con la fecha de su última consulta y el diagnóstico asociado
 
@@ -180,8 +180,8 @@ FROM consultas con JOIN pacientes pac ON con.id_paciente = pac.id_paciente JOIN 
 GROUP BY med.nombre, pac.nombre 
 ORDER BY med.nombre, pac.nombre; 
 ```
-![Query 16.1](./Imagenes TP4/Query 16.1.png)
-![Query 16.2](./Imagenes TP4/Query 16.2.png)
+![Query 16.1](Imagenes TP4/Query 16.1.png)
+![Query 16.2](Imagenes TP4/Query 16.2.png)
 
 ### 17. Obtener el nombre del medicamento junto con el total de recetas prescritas para ese medicamento, el nombre del médico que lo recetó y el nombre del paciente al que se le recetó, ordenado por total de recetas en orden descendente.
 
@@ -191,7 +191,7 @@ FROM medicamentos med JOIN recetas rec ON med.id_medicamento = rec.id_medicament
 GROUP BY med.nombre, doc.nombre, pac.nombre 
 ORDER BY cantidad DESC;
 ```
-![Query 17](./Imagenes TP4/Query 17.png)
+![Query 17](Imagenes TP4/Query 17.png)
 
 ### 18. Obtener el nombre del médico junto con el total de pacientes a los que ha atendido, ordenado por el total de pacientes en orden descendente.
 
@@ -201,6 +201,6 @@ FROM medicos med JOIN consultas con ON med.id_medico = con.id_medico
 GROUP BY med.nombre 
 ORDER BY cantidad DESC;
 ```
-![Query 18](./Imagenes TP4/Query 18.png)
+![Query 18](Imagenes TP4/Query 18.png)
 
 
