@@ -11,7 +11,8 @@ Según la función, es una base de datos transaccional u operativa debido a que 
 
 ### 2. Diagrama entidad-relación
 
-(Insertá la imagen del diagrama que creaste)
+![Imagenes TP4/Modelo Lógico Diagrama.png](https://github.com/mavi041/TP4_FernandezCalderon_Nespola/blob/main/Imagenes%20TP4/Modelo%20Lo%CC%81gico%20Diagrama%20.png)
+
 
 
 ### 3. Modelo lógico entidad-relación
@@ -171,7 +172,7 @@ GROUP BY pac.nombre, con.fecha, con.diagnostico
 ORDER BY con.fecha DESC 
 LIMIT 1;
 ```
-
+![Imagenes TP4/Query 15] (https://github.com/mavi041/TP4_FernandezCalderon_Nespola/blob/main/Imagenes%20TP4/Query%2015.png)
 
 ### 16. Obtener el nombre del médico junto con el nombre del paciente y el número total de consultas realizadas por cada médico para cada paciente, ordenado por médico y paciente
 
