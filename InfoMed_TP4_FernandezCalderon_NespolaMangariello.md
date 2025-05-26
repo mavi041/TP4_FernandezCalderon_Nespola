@@ -102,7 +102,14 @@ GROUP BY ciudad;
 ``` sql
 SELECT ciudad, id_sexo, COUNT(*) FROM pacientes
 GROUP BY ciudad, id_sexo;
-``` 
+```
+
+```sql
+SELECT pac.ciudad, sex.descripcion, COUNT(*) AS cantidad
+FROM pacientes pac JOIN sexobiologico sex ON pac.id_sexo = sex.id_sexo
+GROUP BY pac.ciudad, sex.descripcion;
+```
+
 ![Imagenes TP4/Query 8.1](https://github.com/mavi041/TP4_FernandezCalderon_Nespola/blob/main/Imagenes%20TP4/Query%208.1.png)
 ![Imagenes TP4/Query 8.2](https://github.com/mavi041/TP4_FernandezCalderon_Nespola/blob/main/Imagenes%20TP4/Query%208.2.png) 
 
