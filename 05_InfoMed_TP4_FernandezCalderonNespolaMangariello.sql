@@ -2,7 +2,7 @@
 SELECT DISTINCT ciudad FROM pacientes;
 SET ciudad = TRIM(BOTH '' FROM LOWER(ciudad))
 
--- Para limpieza de datos (puede requerir adaptaciones)
+-- Para limpieza de datos 
 UPDATE pacientes SET ciudad = TRIM(BOTH ' ' FROM LOWER(ciudad));
 
 UPDATE pacientes SET ciudad = 'Buenos Aires' WHERE ciudad IN ('buenos aiers', 'buenos   aires', 'buenos aires');
