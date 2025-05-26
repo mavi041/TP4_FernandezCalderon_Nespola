@@ -1,4 +1,4 @@
--- Query 12
+-- Ejercicio 12
 SELECT med.nombre 
 FROM recetas rec 
 JOIN medicamentos med ON rec.id_medicamento = med.id_medicamento 
