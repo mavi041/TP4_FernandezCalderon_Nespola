@@ -51,7 +51,8 @@ SELECT
   EXTRACT(YEAR FROM age(current_date, fecha_nacimiento)) AS edad
 FROM pacientes;
 ```
-![Imagenes TP4/Query 2.png](https://github.com/mavi041/TP4_FernandezCalderon_Nespola/blob/main/Imagenes%20TP4/Query%202.png)
+![Imagenes TP4/Query 2.1.png](https://github.com/mavi041/TP4_FernandezCalderon_Nespola/blob/main/Imagenes%20TP4/Query%202.1.png)
+
 
 ### 3. Actualización de la dirección de la paciente Luciana Gómez
 
