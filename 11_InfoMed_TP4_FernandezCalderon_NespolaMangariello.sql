@@ -1,4 +1,4 @@
--- Query 11
+-- Ejercicio 11
 SELECT pac.nombre, con.fecha, con.diagnostico 
 FROM pacientes pac 
 JOIN consultas con ON pac.id_paciente = con.id_paciente 
