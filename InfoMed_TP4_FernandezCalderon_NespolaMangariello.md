@@ -59,7 +59,7 @@ FROM pacientes;
 ```sql
 UPDATE pacientes SET numero = '500', calle = 'Calle Corrientes', ciudad = 'Buenos Aires' WHERE nombre = 'Luciana Gómez' AND numero = '121' AND calle = 'Avenida Las Heras';
 ```
-![Imagenes TP4/Query 3](https://github.com/mavi041/TP4_FernandezCalderon_Nespola/blob/main/Imagenes%20TP4/Query%203.png)
+![Imagenes TP4/Query 3.1](https://github.com/mavi041/TP4_FernandezCalderon_Nespola/blob/main/Imagenes%20TP4/Query%203.1.png) 
 
 ### 4. Seleccionar el nombre y la matrícula de cada médico cuya especialidad sea identificada por el id 4
 
